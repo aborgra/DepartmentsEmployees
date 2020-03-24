@@ -128,6 +128,7 @@ namespace DepartmentsEmployees.Data
                 {
                     // These SQL parameters are annoying. Why can't we use string interpolation?
                     // ... sql injection attacks!!!
+                    // sqlCommand allows you to write the code that will be executed by the sql server
                     cmd.CommandText = "INSERT INTO Department (DeptName) OUTPUT INSERTED.Id Values (@deptName)";
                     cmd.Parameters.Add(new SqlParameter("@deptName", department.DeptName));
                     int id = (int)cmd.ExecuteScalar();
