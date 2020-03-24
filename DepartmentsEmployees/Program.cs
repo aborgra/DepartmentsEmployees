@@ -78,7 +78,7 @@ namespace DepartmentsEmployees
                         var deleteDeptChoice = int.Parse(Console.ReadLine());
 
                         departmentRepo.DeleteDepartment(deleteDeptChoice);
-                        Console.WriteLine($"Department with the Id of{deleteDeptChoice} has been deleted.");
+                        Console.WriteLine($"Department with the Id of {deleteDeptChoice} has been deleted.");
                         break;
 
                     case 6:
